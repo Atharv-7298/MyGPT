@@ -1,0 +1,381 @@
+/* ====== RESET STYLES ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: rgb(3, 0, 31);
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ====== APP CONTAINER ====== */
+.App {
+  min-height: 100vh;
+  display: flex;
+}
+
+/* ====== SIDEBAR ====== */
+.sideBar {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 1.5rem;
+  border-right: 1px solid rgb(98, 95, 95);
+  background-color: #0d0d2b;
+}
+
+/* ====== SIDEBAR - UPPER SECTION ====== */
+.upper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.logo img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.name {
+  font-size: 2rem;
+  color: #00ffcc;
+}
+
+/* NEW CHAT BUTTON (THEMED) */
+.midbtn {
+  background-color: #2828f6; /* light mode - blue */
+  color: white;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 0.8rem;
+  font-size: 1.7rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.midbtn:hover {
+  background-color: #1e1ee0; /* light mode hover */
+}
+
+/* DARK MODE - MIDBTN */
+body.dark-mode .midbtn {
+  background-color: #ded4d4; /* neutral gray, not too dark */
+  color: rgb(255, 255, 255);
+  border: 0.1px solid rgb(119, 119, 119);
+}
+
+body.dark-mode .midbtn:hover {
+  background-color: #cc1717; /* lighter gray on hover */
+}
+
+
+
+.chatBtn {
+  width: 35px;
+  margin-left: 27%;
+}
+
+.upperbottom {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.qyery {
+  background-color: transparent;
+  color: white;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.6rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+  transition: background-color 0.2s ease;
+}
+
+.qyery:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ====== SIDEBAR - LOWER SECTION ====== */
+.lower {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 2rem 1.5rem;
+  margin-bottom: 50px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 1rem 1.2rem;
+  border-radius: 0.8rem;
+  transition: background-color 0.25s ease;
+}
+
+.listItem img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.listItem:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ====== MAIN SECTION ====== */
+.main {
+  flex: 9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* ====== CHATS ====== */
+.chats {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-right: 1rem;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+.chats::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chats::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+.chat {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  margin: 10px 40px;
+  border-radius: 1rem;
+  line-height: 1.6;
+}
+
+.chat img {
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.chat p {
+  font-size: 1.4rem;
+  color: #f1f1f1;
+  margin: 0;
+}
+
+/* ====== FOOTER / INPUT AREA ====== */
+.footer {
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.inp {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 0.8rem 1.2rem;
+  width: 70%;
+  margin-left: 150px;
+}
+
+.inp input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.4rem;
+  outline: none;
+  padding: 0.6rem;
+}
+
+.send {
+  background-color: #00ffcc;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.send:hover {
+  background-color: #00ddb0;
+}
+
+.send img {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+/* ====== STARTER MESSAGE ====== */
+.starter-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #888;
+  gap: 0.5rem;
+}
+
+.starter-message p {
+  font-size: 30px;
+  color: #11c7db;
+}
+
+/* ====== CODE HIGHLIGHT ====== */
+code {
+  border-radius: 5px;
+}
+
+.hljs-comment {
+  color: #d22929;
+}
+
+/* ====== TOGGLE BUTTON ====== */
+.toggle-wrapper {
+  text-align: right;
+}
+
+.toggle-btn {
+  background-color: #0b0bc0;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background-color: #1e1ee0;
+}
+
+/* ====== DARK MODE ====== */
+body.dark-mode {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+body.dark-mode .main,
+body.dark-mode .footer,
+body.dark-mode .sideBar,
+body.dark-mode .chats,
+body.dark-mode .starter-message {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+}
+body.dark-mode .starter-message {
+  color: white !important;
+}
+
+
+body.dark-mode .midbtn {
+  background-color: #2c2c2c;
+}
+
+body.dark-mode .midbtn:hover {
+  background-color: #3b3b3b;
+}
+
+body.dark-mode .inp input {
+  background-color: #3a3a3a;
+  border: 1px solid #555;
+  color: white;
+}
+
+body.dark-mode .send img {
+  filter: brightness(0.8);
+}
+
+body.dark-mode .toggle-btn {
+  background-color: #444;
+  color: #f0f0f0;
+}
+
+.toggle-mode {
+  padding: 0.6rem 1rem;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light Theme */
+.toggle-mode.light {
+  background-color: #0808a9;
+  color: #fff;
+}
+
+.toggle-mode.light:hover {
+  background-color: #1e1ee0;
+}
+
+/* Dark Theme */
+.toggle-mode.dark {
+  background-color: #444;
+  color: #fff;
+}
+
+.toggle-mode.dark:hover {
+  background-color: #666;
+}
+
+body.dark-mode .starter-message p {
+  color: white;
+}
