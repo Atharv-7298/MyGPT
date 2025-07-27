@@ -9,10 +9,6 @@ This is a lightweight GPT-style web app that lets you ask questions and get AI-g
 * ✅ Clean, minimal UI focused on fast text interaction
 * ✅ Fully text-based (no media, no history)
 
-### 🛠️ Tech Stack
-
-**Frontend**: React
-
 ### 🚀 Getting Started
 
 1. Clone the repository
